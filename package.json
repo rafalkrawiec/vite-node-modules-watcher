@@ -1,0 +1,43 @@
+{
+    "name": "@plenny/vite-node-modules-watcher",
+    "description": "Utility package to make Vite watcher looking for changes within node_modules which is useful when working on libraries locally.",
+    "keywords": ["plenny", "vite", "dependency", "external"],
+    "version": "0.1.0",
+    "license": "MIT",
+    "homepage": "https://github.com/rafalkrawiec/vite-node-modules-watcher",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/rafalkrawiec/vite-node-modules-watcher.git"
+    },
+    "bugs": {
+        "url": "https://github.com/rafalkrawiec/vite-node-modules-watcher/issues",
+        "email": "rafal.krawiec16@gmail.com"
+    },
+    "author": {
+        "name": "Rafał Krawiec",
+        "email": "rafal.krawiec16@gmail.com"
+    },
+    "type": "module",
+    "module": "dist/watcher.js",
+    "main": "dist/watcher.cjs",
+    "types": "dist/watcher.d.ts",
+    "files": ["dist"],
+    "exports": {
+        ".": {
+            "types": "./dist/watcher.d.ts",
+            "import": "./dist/watcher.js",
+            "require": "./dist/watcher.cjs"
+        }
+    },
+    "scripts": {
+        "dev": "vite build -m development --watch",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@types/node": "^20.10.0",
+        "terser": "^5.26.0",
+        "typescript": "^5.0.0",
+        "vite": "^5.0.0",
+        "vite-plugin-dts": "^3.6.0"
+    }
+}
